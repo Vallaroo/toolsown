@@ -1,8 +1,9 @@
+import Home from '@/views/home'
 
-export default function Home() {
+export default function HomePage() {
   return (
-  <div>
-    <h1>Hello, world!</h1>
-  </div>
-  );
+    <div className='h-full w-full'>
+      <Home />
+    </div>
+  )
 }
