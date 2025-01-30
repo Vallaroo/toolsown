@@ -30,11 +30,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <SidebarProvider>
-        <AppSidebar />
-        <main>
-        <SidebarTrigger />
-        {children}
-      </main>
+          <AppSidebar />
+          <main className="p-10 flex flex-col w-full min-h-screen ">
+            <SidebarTrigger />
+            {children}
+          </main>
         </SidebarProvider>
       </body>
     </html>
