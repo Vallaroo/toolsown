@@ -1,9 +1,14 @@
 "use client"
 
 import * as React from "react"
-
-import { BookOpen, Calculator, ChevronsUpDown, EarthLock, Flag, GalleryVerticalEnd, Settings2, } from "lucide-react"
-
+import {
+  BookOpen,
+  Calculator,
+  EarthLock,
+  GalleryVerticalEnd,
+  Settings2,
+  Home
+} from "lucide-react"
 import {
   Sidebar,
   SidebarContent,
@@ -12,15 +17,22 @@ import {
   SidebarMenuButton,
   SidebarRail,
 } from "@/components/ui/sidebar"
-
 import { NavMain } from "@/components/ui/nav-main"
+import Link from "next/link"
+import { CollapsibleTrigger } from "@radix-ui/react-collapsible"
 
-// Menu items.
+// Menu items
 const data = {
   toolsown: {
     name: "ToolsOwn",
     logo: GalleryVerticalEnd,
     subTitle: "Simplified Finance Calculator Hub",
+  },
+  home: {
+    title: "Home",
+    url: "/",
+    icon: Home,
+    isActive: false,
   },
   navMain: [
     {
@@ -31,15 +43,15 @@ const data = {
       items: [
         {
           title: "Income Tax Calculator",
-          url: "#",
+          url: "/income-tax-calculator",
         },
         {
           title: "EMI Calculator",
-          url: "#",
+          url: "/emi-calculator",
         },
         {
-          title: "Mutual Fund Calculatore",
-          url: "#",
+          title: "Mutual Fund Calculator",
+          url: "/mutual-fund-calculator",
         },
       ],
     },
@@ -100,12 +112,27 @@ const data = {
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const sidebarRef = React.useRef<HTMLDivElement>(null);
+
+  const handleLogoClick = () => {
+    const sidebar = sidebarRef.current;
+    if (sidebar) {
+      const isCollapsed = sidebar.getAttribute('data-collapsed') === 'true';
+      sidebar.setAttribute('data-collapsed', (!isCollapsed).toString());
+    }
+  };
+
   return (
-    <Sidebar collapsible="icon" {...props}>
+    <Sidebar
+      ref={sidebarRef}
+      collapsible="icon"
+      {...props}
+    >
       <SidebarHeader>
         <SidebarMenuButton
           size="lg"
           className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+          onClick={handleLogoClick}
         >
           <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
             <GalleryVerticalEnd className="size-4" />
@@ -118,10 +145,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </div>
         </SidebarMenuButton>
       </SidebarHeader>
-      <SidebarMenuButton asChild>
-  <a href="#">Home</a>
-</SidebarMenuButton>
       <SidebarContent>
+        <Link href="/">
+          <SidebarMenuButton asChild className="flex items-center justify-center">
+            <SidebarMenuButton tooltip={data.home.title} className="flex items-center justify-start pl-4">
+              {data.home.icon && <data.home.icon className="size-4 " />}
+              <span className="data-[collapsed=true]:hidden">{data.home.title}</span>
+            </SidebarMenuButton>
+          </SidebarMenuButton>
+        </Link>
         <NavMain items={data.navMain} />
       </SidebarContent>
       <SidebarFooter />
