@@ -68,24 +68,24 @@ const data = {
     },
     {
       title: "Blogs",
-      url: "#",
+      url: "/pages/blog",
       icon: BookOpen,
       items: [
         {
           title: "Finance",
-          url: "#",
+          url: "/pages/blog/finance",
         },
         {
           title: "Crypto",
-          url: "#",
+          url: "/pages/blog/crypto",
         },
         {
           title: "Wealth",
-          url: "#",
+          url: "/pages/blog/wealth",
         },
         {
           title: "Fin-tech",
-          url: "#",
+          url: "/pages/blog/fin-tech",
         },
       ],
     },
