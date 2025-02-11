@@ -1,0 +1,266 @@
+{
+    "indian_tax_slabs": {
+      "FY_2022_23": {
+        "old_regime": {
+          "description": "Old Tax Regime with deductions",
+          "slabs": [
+            {
+              "min": 0,
+              "max": 250000,
+              "rate": 0,
+              "note": "No tax up to 2.5L"
+            },
+            {
+              "min": 250001,
+              "max": 500000,
+              "rate": 5,
+              "note": "Tax rebate under 87A available"
+            },
+            {
+              "min": 500001,
+              "max": 1000000,
+              "rate": 20
+            },
+            {
+              "min": 1000001,
+              "max": null,
+              "rate": 30
+            }
+          ],
+          "cess": 4,
+          "surcharge": [
+            {
+              "income_range": "50L to 1Cr",
+              "rate": 10
+            },
+            {
+              "income_range": "1Cr to 2Cr",
+              "rate": 15
+            },
+            {
+              "income_range": "2Cr to 5Cr",
+              "rate": 25
+            },
+            {
+              "income_range": "Above 5Cr",
+              "rate": 37
+            }
+          ]
+        },
+        "new_regime": {
+          "description": "New Tax Regime without deductions",
+          "slabs": [
+            {
+              "min": 0,
+              "max": 250000,
+              "rate": 0
+            },
+            {
+              "min": 250001,
+              "max": 500000,
+              "rate": 5
+            },
+            {
+              "min": 500001,
+              "max": 750000,
+              "rate": 10
+            },
+            {
+              "min": 750001,
+              "max": 1000000,
+              "rate": 15
+            },
+            {
+              "min": 1000001,
+              "max": 1250000,
+              "rate": 20
+            },
+            {
+              "min": 1250001,
+              "max": 1500000,
+              "rate": 25
+            },
+            {
+              "min": 1500001,
+              "max": null,
+              "rate": 30
+            }
+          ],
+          "cess": 4
+        }
+      },
+      "FY_2023_24": {
+        "old_regime": {
+          "description": "Old Tax Regime with deductions",
+          "slabs": [
+            {
+              "min": 0,
+              "max": 250000,
+              "rate": 0,
+              "note": "No tax up to 2.5L"
+            },
+            {
+              "min": 250001,
+              "max": 500000,
+              "rate": 5,
+              "note": "Tax rebate under 87A available"
+            },
+            {
+              "min": 500001,
+              "max": 1000000,
+              "rate": 20
+            },
+            {
+              "min": 1000001,
+              "max": null,
+              "rate": 30
+            }
+          ],
+          "cess": 4,
+          "surcharge": [
+            {
+              "income_range": "50L to 1Cr",
+              "rate": 10
+            },
+            {
+              "income_range": "1Cr to 2Cr",
+              "rate": 15
+            },
+            {
+              "income_range": "2Cr to 5Cr",
+              "rate": 25
+            },
+            {
+              "income_range": "Above 5Cr",
+              "rate": 37
+            }
+          ]
+        },
+        "new_regime": {
+          "description": "New Tax Regime (Default from FY 2023-24)",
+          "slabs": [
+            {
+              "min": 0,
+              "max": 300000,
+              "rate": 0,
+              "note": "No tax up to 3L"
+            },
+            {
+              "min": 300001,
+              "max": 600000,
+              "rate": 5
+            },
+            {
+              "min": 600001,
+              "max": 900000,
+              "rate": 10
+            },
+            {
+              "min": 900001,
+              "max": 1200000,
+              "rate": 15
+            },
+            {
+              "min": 1200001,
+              "max": 1500000,
+              "rate": 20
+            },
+            {
+              "min": 1500001,
+              "max": null,
+              "rate": 30
+            }
+          ],
+          "cess": 4,
+          "standard_deduction": 50000
+        }
+      },
+      "FY_2024_25": {
+        "note": "Same as FY 2023-24 with no major changes",
+        "old_regime": {
+          "description": "Old Tax Regime with deductions",
+          "slabs": [
+            {
+              "min": 0,
+              "max": 250000,
+              "rate": 0,
+              "note": "No tax up to 2.5L"
+            },
+            {
+              "min": 250001,
+              "max": 500000,
+              "rate": 5,
+              "note": "Tax rebate under 87A available"
+            },
+            {
+              "min": 500001,
+              "max": 1000000,
+              "rate": 20
+            },
+            {
+              "min": 1000001,
+              "max": null,
+              "rate": 30
+            }
+          ],
+          "cess": 4,
+          "surcharge": [
+            {
+              "income_range": "50L to 1Cr",
+              "rate": 10
+            },
+            {
+              "income_range": "1Cr to 2Cr",
+              "rate": 15
+            },
+            {
+              "income_range": "2Cr to 5Cr",
+              "rate": 25
+            },
+            {
+              "income_range": "Above 5Cr",
+              "rate": 37
+            }
+          ]
+        },
+        "new_regime": {
+          "description": "New Tax Regime (Default)",
+          "slabs": [
+            {
+              "min": 0,
+              "max": 300000,
+              "rate": 0,
+              "note": "No tax up to 3L"
+            },
+            {
+              "min": 300001,
+              "max": 600000,
+              "rate": 5
+            },
+            {
+              "min": 600001,
+              "max": 900000,
+              "rate": 10
+            },
+            {
+              "min": 900001,
+              "max": 1200000,
+              "rate": 15
+            },
+            {
+              "min": 1200001,
+              "max": 1500000,
+              "rate": 20
+            },
+            {
+              "min": 1500001,
+              "max": null,
+              "rate": 30
+            }
+          ],
+          "cess": 4,
+          "standard_deduction": 75000
+        }
+      }
+    }
+  }
