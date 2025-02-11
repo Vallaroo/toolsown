@@ -19,7 +19,6 @@ import {
 } from "@/components/ui/sidebar"
 import { NavMain } from "@/components/ui/nav-main"
 import Link from "next/link"
-import { CollapsibleTrigger } from "@radix-ui/react-collapsible"
 
 // Menu items
 const data = {
